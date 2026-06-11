@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Preenchimento facial em Itu - SP. Harmonize o rosto e suavize rugas com resultados naturais e imediatos. Clínica Mônica Lunardon.">
+  <title>Preenchimento Facial em Itu | Clínica Mônica Lunardon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --cream: #FAF7F4; --warm: #F2EDE8; --rose: #C9A99A; --rose-dk: #A07060;
+      --text: #2C2420; --muted: #7A6A64; --white: #FFFFFF;
+      --shadow: 0 4px 24px rgba(44,36,32,0.10);
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--text); line-height: 1.7; }
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(250,247,244,0.92); backdrop-filter: blur(8px); padding: 0 5vw; display: flex; align-items: center; justify-content: space-between; height: 68px; border-bottom: 1px solid rgba(201,169,154,0.25); }
+    nav .brand { font-family: 'Merriweather', serif; font-size: 1rem; font-weight: 300; letter-spacing: 0.04em; color: var(--text); text-decoration: none; }
+    nav .cta-nav { background: var(--rose); color: var(--white); padding: 0.45rem 1.2rem; border-radius: 50px; font-size: 0.85rem; font-weight: 600; text-decoration: none; transition: background 0.2s; }
+    nav .cta-nav:hover { background: var(--rose-dk); }
+    .hero { min-height: 88vh; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 4rem; padding: 6rem 8vw 4rem; }
+    .hero-eyebrow { display: inline-block; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--rose-dk); margin-bottom: 1.2rem; }
+    .hero h1 { font-family: 'Merriweather', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 300; line-height: 1.25; margin-bottom: 1.4rem; }
+    .hero h1 em { font-style: italic; color: var(--rose-dk); }
+    .hero p { font-size: 1.05rem; color: var(--muted); max-width: 42ch; margin-bottom: 2.2rem; }
+    .btn-primary { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--rose); color: var(--white); padding: 0.85rem 2rem; border-radius: 50px; font-size: 1rem; font-weight: 600; text-decoration: none; transition: background 0.2s, transform 0.15s; }
+    .btn-primary:hover { background: var(--rose-dk); transform: translateY(-1px); }
+    .hero-visual { background: var(--warm); border-radius: 24px; aspect-ratio: 4/5; display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative; }
+    .hero-badge { position: absolute; bottom: 1.5rem; left: 1.5rem; background: var(--white); border-radius: 14px; padding: 0.8rem 1.2rem; box-shadow: var(--shadow); font-size: 0.85rem; font-weight: 600; color: var(--text); }
+    .hero-badge span { display: block; font-size: 0.72rem; font-weight: 400; color: var(--muted); }
+    section { padding: 5rem 8vw; }
+    section:nth-child(even) { background: var(--warm); }
+    .section-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--rose-dk); margin-bottom: 0.6rem; }
+    .section-title { font-family: 'Merriweather', serif; font-size: clamp(1.5rem, 3vw, 2.1rem); font-weight: 300; line-height: 1.3; margin-bottom: 1rem; }
+    .section-sub { color: var(--muted); max-width: 56ch; margin-bottom: 2.5rem; font-size: 1rem; }
+    .desc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+    .desc-grid p { color: var(--muted); font-size: 1rem; line-height: 1.8; }
+    .desc-detail { background: var(--white); border-radius: 16px; padding: 2rem; box-shadow: var(--shadow); }
+    .desc-detail h3 { font-family: 'Merriweather', serif; font-size: 1rem; font-weight: 400; margin-bottom: 1.2rem; color: var(--text); }
+    .detail-row { display: flex; justify-content: space-between; padding: 0.7rem 0; border-bottom: 1px solid var(--warm); font-size: 0.9rem; }
+    .detail-row:last-child { border-bottom: none; }
+    .detail-row .label { color: var(--muted); }
+    .detail-row .value { font-weight: 600; color: var(--text); }
+    .benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; }
+    .benefit-card { background: var(--white); border-radius: 16px; padding: 1.8rem; box-shadow: var(--shadow); transition: transform 0.2s; }
+    .benefit-card:hover { transform: translateY(-3px); }
+    .benefit-icon { width: 44px; height: 44px; border-radius: 12px; background: linear-gradient(135deg, var(--rose), var(--rose-dk)); display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; font-size: 1.1rem; color: var(--white); }
+    .benefit-card h4 { font-size: 0.95rem; font-weight: 600; margin-bottom: 0.4rem; }
+    .benefit-card p { font-size: 0.88rem; color: var(--muted); line-height: 1.6; }
+    .faq-list { max-width: 720px; }
+    .faq-item { border-bottom: 1px solid rgba(201,169,154,0.3); padding: 1.2rem 0; }
+    .faq-question { width: 100%; background: none; border: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-family: 'DM Sans', sans-serif; font-size: 1rem; font-weight: 600; color: var(--text); text-align: left; padding: 0; }
+    .faq-question i { color: var(--rose); font-size: 0.85rem; transition: transform 0.2s; }
+    .faq-question.open i { transform: rotate(45deg); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; font-size: 0.95rem; color: var(--muted); line-height: 1.7; }
+    .faq-answer.open { max-height: 300px; padding-top: 0.8rem; }
+    .cta-section { background: linear-gradient(135deg, var(--rose-dk), var(--rose)); color: var(--white); text-align: center; border-radius: 24px; padding: 4rem 2rem; margin: 0 8vw 5rem; }
+    .cta-section h2 { font-family: 'Merriweather', serif; font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 300; margin-bottom: 0.8rem; }
+    .cta-section p { opacity: 0.88; margin-bottom: 2rem; font-size: 1rem; }
+    .btn-white { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--white); color: var(--rose-dk); padding: 0.85rem 2rem; border-radius: 50px; font-size: 1rem; font-weight: 700; text-decoration: none; transition: transform 0.15s; }
+    .btn-white:hover { transform: translateY(-2px); }
+    footer { background: var(--text); color: rgba(255,255,255,0.55); text-align: center; padding: 1.8rem; font-size: 0.82rem; }
+    footer a { color: var(--rose); text-decoration: none; }
+    nav a:first-child img { width: 180px; display: block; }
+    @media (max-width: 768px) {
+      .hero { grid-template-columns: 1fr; padding: 4rem 5vw 3rem; gap: 2.5rem; min-height: auto; }
+      .hero-visual { aspect-ratio: 16/9; }
+      .desc-grid { grid-template-columns: 1fr; gap: 2rem; }
+      section { padding: 3.5rem 5vw; }
+      .cta-section { margin: 0 5vw 3.5rem; }
+    }
+  </style>
+</head>
+<body>
+<nav>
+  <a href="index.html"><img src="assets/logo/logo.png" alt="Clínica Mônica Lunardon"></a>
+  <a href="https://api.whatsapp.com/send?phone=5511984010851" class="cta-nav" target="_blank"><i class="fa-brands fa-whatsapp"></i> Agendar</a>
+</nav>
+
+<section class="hero" style="background: var(--cream); padding-top: 5rem;">
+  <div>
+    <span class="hero-eyebrow">Harmonização facial · Itu, SP</span>
+    <h1>Harmonize seu rosto com <em>resultados naturais e imediatos</em></h1>
+    <p>O preenchimento facial redefine contornos, restaura volumes perdidos e suaviza rugas com ácido hialurônico — substância presente naturalmente no organismo.</p>
+    <a href="https://api.whatsapp.com/send?phone=5511984010851&text=Olá! Gostaria de agendar uma consulta para preenchimento facial." class="btn-primary" target="_blank"><i class="fa-brands fa-whatsapp"></i> Agendar consulta</a>
+  </div>
+  <div class="hero-visual">
+    <div style="text-align:center; color: var(--muted); font-size: 0.9rem; padding: 2rem;"><img src="assets/img/preen.jpeg"></div>
+    <div class="hero-badge">Resultado imediato<span>Reversível e seguro</span></div>
+  </div>
+</section>
+
+<section>
+  <div class="section-label">O procedimento</div>
+  <h2 class="section-title">O que é o preenchimento facial?</h2>
+  <div class="desc-grid">
+    <div>
+      <p>O preenchimento é um procedimento minimamente invasivo que utiliza ácido hialurônico — substância biocompatível — para restaurar volumes, redefinir contornos e suavizar sulcos e rugas profundas. É amplamente utilizado em lábios, maçãs do rosto, olheiras, queixo e nasolabial.</p>
+      <br>
+      <p>Na Clínica Mônica Lunardon, cada protocolo é personalizado para respeitar a anatomia e a expressividade única de cada paciente, garantindo resultados harmônicos e naturais.</p>
+    </div>
+    <div class="desc-detail">
+      <h3>Informações do procedimento</h3>
+      <div class="detail-row"><span class="label">Duração da sessão</span><span class="value">30 a 60 min</span></div>
+      <div class="detail-row"><span class="label">Início dos resultados</span><span class="value">Imediato</span></div>
+      <div class="detail-row"><span class="label">Duração do efeito</span><span class="value">6 a 18 meses</span></div>
+      <div class="detail-row"><span class="label">Recuperação</span><span class="value">1 a 2 dias</span></div>
+      <div class="detail-row"><span class="label">Indicado para</span><span class="value">Volumes e sulcos</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="section-label">Por que escolher</div>
+  <h2 class="section-title">Benefícios do preenchimento</h2>
+  <p class="section-sub">Uma das técnicas mais versáteis e seguras da estética facial moderna.</p>
+  <div class="benefits-grid">
+    <div class="benefit-card"><div class="benefit-icon"><i class="fa-solid fa-bolt"></i></div><h4>Resultado imediato</h4><p>A transformação é visível logo após a sessão, com mínimo período de recuperação.</p></div>
+    <div class="benefit-card"><div class="benefit-icon"><i class="fa-solid fa-rotate-left"></i></div><h4>Reversível</h4><p>O ácido hialurônico pode ser dissolvido caso o resultado não agrade. Segurança total.</p></div>
+    <div class="benefit-card"><div class="benefit-icon"><i class="fa-solid fa-face-smile"></i></div><h4>Harmonização completa</h4><p>Trata lábios, olheiras, maçãs, queixo e sulcos em uma única sessão, se necessário.</p></div>
+    <div class="benefit-card"><div class="benefit-icon"><i class="fa-solid fa-droplet"></i></div><h4>Biocompatível</h4><p>O ácido hialurônico é naturalmente produzido pelo corpo. Mínimo risco de rejeição.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="section-label">Dúvidas frequentes</div>
+  <h2 class="section-title">Perguntas sobre preenchimento</h2>
+  <div class="faq-list">
+    <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">O preenchimento doí? <i class="fa-solid fa-plus"></i></button><div class="faq-answer">O produto já contém anestésico em sua fórmula. Para áreas mais sensíveis como lábios, pode-se aplicar creme anestésico antes. O desconforto é mínimo.</div></div>
+    <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">O resultado fica natural? <i class="fa-solid fa-plus"></i></button><div class="faq-answer">Sim, quando aplicado com técnica adequada e dose personalizada. A Dra. Mônica prioriza resultados harmônicos que valorizam as características naturais de cada paciente.</div></div>
+    <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">Posso sair imediatamente após? <i class="fa-solid fa-plus"></i></button><div class="faq-answer">Sim. Pode haver pequeno edema ou hematoma nas primeiras 24 a 48 horas, especialmente em lábios. Recomenda-se evitar exercícios intensos e calor excessivo nos primeiros dias.</div></div>
+    <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">Quanto tempo dura? <i class="fa-solid fa-plus"></i></button><div class="faq-answer">Depende da área tratada e do metabolismo individual. Em média, de 6 a 18 meses. Lábios tendem a metabolizar mais rápido; maçãs e queixo duram mais.</div></div>
+    <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">Posso combinar com outros procedimentos? <i class="fa-solid fa-plus"></i></button><div class="faq-answer">Sim. O preenchimento é frequentemente combinado com toxina botulínica para uma harmonização mais completa. A Dra. Mônica avalia e planeja o protocolo ideal em consulta.</div></div>
+  </div>
+</section>
+
+<div class="cta-section">
+  <h2>Descubra o equilíbrio perfeito para o seu rosto</h2>
+  <p>Agende uma avaliação e receba um plano personalizado de harmonização.</p>
+  <a href="https://api.whatsapp.com/send?phone=5511984010851&text=Olá! Gostaria de agendar uma consulta para preenchimento facial." class="btn-white" target="_blank"><i class="fa-brands fa-whatsapp"></i> Falar no WhatsApp</a>
+</div>
+
+<footer><p>© 2026 Clínica Mônica Lunardon · Rua Maria Joana da Silva Correa, 160, Sala 10 — Itu, SP · <a href="https://api.whatsapp.com/send?phone=5511984010851">(11) 98401-0851</a></p></footer>
+<script>function toggleFaq(btn){const answer=btn.nextElementSibling;const isOpen=answer.classList.contains('open');document.querySelectorAll('.faq-answer').forEach(a=>a.classList.remove('open'));document.querySelectorAll('.faq-question').forEach(b=>b.classList.remove('open'));if(!isOpen){answer.classList.add('open');btn.classList.add('open');}}</script>
+</body>
+</html>

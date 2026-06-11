@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Realce sua beleza com tratamentos estéticos modernos e seguros. Atendimento personalizado e resultados visíveis desde as primeiras sessões.">
+  <meta name="keywords" content="toxina botulinica, estética avançada, preenchimento, itu">
+  <meta name="author" content="Mônica Lunardon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="icon" type="image/x-icon" href="assets/logo/icon.png">
+  <title>Estética avançada | Mônica Lunardon</title>
+
+  <style>
+    /* ── RESET ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* ── TOKENS ── */
+    :root {
+      --cream:   #FAF7F4;
+      --warm:    #F2EDE8;
+      --rose:    #C9A99A;
+      --rose-dk: #A07060;
+      --text:    #2C2420;
+      --muted:   #7A6A64;
+      --white:   #FFFFFF;
+      --shadow:  0 4px 24px rgba(44,36,32,0.10);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    /* ── HEADER / NAV ── */
+    .header {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(250,247,244,0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(201,169,154,0.25);
+    }
+
+    .nav-bar {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 5vw; height: 68px;
+    }
+
+    .nav-bar a:first-child img { width: 180px; display: block; }
+
+    .nav-bar .links {
+      list-style: none;
+      display: flex; align-items: center; gap: 2rem;
+    }
+
+    .nav-bar .links li a {
+      font-size: 0.9rem; font-weight: 500;
+      color: var(--text); text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-bar .links li a:hover { color: var(--rose-dk); }
+
+    /* Último item (Agendar) vira botão */
+    .nav-bar .links li:last-child a {
+      background: var(--rose); color: var(--white);
+      padding: 0.45rem 1.2rem; border-radius: 50px;
+      font-size: 0.85rem; font-weight: 600;
+      transition: background 0.2s;
+    }
+    .nav-bar .links li:last-child a:hover { background: var(--rose-dk); }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 88vh;
+      display: grid; grid-template-columns: 1fr auto;
+      align-items: center; gap: 3rem;
+      padding: 5rem 8vw 4rem;
+    }
+
+    #main-hero {
+      display: grid; grid-template-columns: 1fr auto;
+      align-items: center; gap: 4rem; width: 100%;
+    }
+
+    #hero-h1 {
+      font-family: 'Merriweather', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 300; line-height: 1.25;
+      margin-bottom: 1.4rem;
+    }
+
+    #desc {
+      border: none;
+      font-size: 1.05rem; color: var(--muted);
+      max-width: 44ch; margin-bottom: 2.2rem;
+      font-style: normal;
+    }
+
+    #btns {
+      display: flex; gap: 1rem; flex-wrap: wrap;
+    }
+
+    #btns button {
+      border: none; cursor: pointer; border-radius: 50px;
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    #con {
+      background: transparent;
+      border: 1.5px solid var(--rose) !important;
+    }
+    #con a { color: var(--rose-dk); }
+    #con:hover { background: var(--warm); }
+
+    #cta { background: var(--rose); }
+    #cta a { color: var(--white); }
+    #cta:hover { background: var(--rose-dk); }
+
+    #btns button a {
+      display: inline-flex; align-items: center;
+      padding: 0.75rem 1.6rem;
+      font-size: 0.95rem; font-weight: 600;
+      text-decoration: none;
+    }
+    #btns button a p { margin: 0; }
+
+    /* Cards de qualidade */
+    #qual {
+      display: flex; flex-direction: column; gap: 1rem;
+    }
+
+    #qual .card {
+      display: flex; align-items: center; gap: 0.8rem;
+      background: var(--white); border-radius: 14px;
+      padding: 0.9rem 1.2rem; box-shadow: var(--shadow);
+      font-size: 0.9rem; font-weight: 600; color: var(--text);
+      min-width: 160px;
+    }
+
+    #qual .card img { width: 28px; height: 28px; object-fit: contain; }
+
+    /* Ícones de redes sociais */
+    #grid-redes {
+      display: flex; flex-direction: column;
+      align-items: center; gap: 1rem;
+    }
+
+    #grid-redes a {
+      width: 40px; height: 40px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; text-decoration: none;
+      background: var(--warm); color: var(--text);
+      transition: background 0.2s, color 0.2s;
+    }
+    #grid-redes a.instagram:hover { background: #E1306C; color: var(--white); }
+    #grid-redes a.whatsapp:hover  { background: #25D366; color: var(--white); }
+    #grid-redes a.pinterest:hover { background: #E60023; color: var(--white); }
+    #grid-redes a.facebook:hover  { background: #1877F2; color: var(--white); }
+
+    /* ── SOBRE ── */
+    #sobre {
+      display: grid; grid-template-columns: 1fr 1fr;
+      align-items: center; gap: 4rem;
+      padding: 5rem 8vw;
+      background: var(--warm);
+    }
+
+    #div-sobre h4 {
+      font-family: 'Merriweather', serif;
+      font-size: clamp(1.5rem, 3vw, 2.1rem);
+      font-weight: 300; margin-bottom: 1rem;
+      color: var(--text);
+    }
+
+    #div-sobre p {
+      font-size: 1rem; color: var(--muted); line-height: 1.8;
+      max-width: 48ch;
+    }
+
+    #img-sobre img {
+      width: 100%; max-width: 400px;
+      border-radius: 20px;
+      object-fit: cover;
+      box-shadow: var(--shadow);
+      display: block;
+    }
+
+    /* ── SERVIÇOS ── */
+    #serv {
+      padding: 5rem 8vw;
+    }
+
+    #serv::before {
+      content: 'Serviços';
+      display: block;
+      font-family: 'Merriweather', serif;
+      font-size: clamp(1.5rem, 3vw, 2.1rem);
+      font-weight: 300; margin-bottom: 2.5rem;
+      color: var(--text);
+    }
+
+    #tratamentos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    a.card-trat {
+      display: block; text-decoration: none; color: inherit;
+      background: var(--white); border-radius: 18px;
+      overflow: hidden; box-shadow: var(--shadow);
+      transition: transform 0.2s;
+      cursor: pointer;
+    }
+    a.card-trat:hover { transform: translateY(-4px); }
+
+    .card-trat img {
+      width: 100%; height: 200px;
+      object-fit: cover; display: block;
+    }
+
+    .card-trat h6 {
+      font-family: 'Merriweather', serif;
+      font-size: 1rem; font-weight: 400;
+      padding: 1.2rem 1.2rem 0.4rem;
+      color: var(--text);
+    }
+
+    .card-trat p {
+      font-size: 0.88rem; color: var(--muted);
+      padding: 0 1.2rem 1.4rem;
+      line-height: 1.6;
+    }
+
+    /* ── CONTATO ── */
+    #cont {
+      padding: 5rem 8vw;
+      background: var(--warm);
+    }
+
+    #cont-div {
+      display: flex; gap: 4rem; flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+    }
+
+    .coluna h6 {
+      font-family: 'Merriweather', serif;
+      font-size: 1rem; font-weight: 400;
+      margin-bottom: 0.8rem; color: var(--text);
+    }
+
+    .coluna p {
+      font-size: 0.95rem; color: var(--muted);
+      line-height: 1.8;
+    }
+
+    #cont iframe {
+      width: 100%; max-width: 700px;
+      height: 380px; border-radius: 16px;
+      display: block; box-shadow: var(--shadow);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--text);
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+      padding: 1.8rem;
+      font-size: 0.82rem;
+    }
+
+    /* ── RESPONSIVO ── */
+    @media (max-width: 900px) {
+      #main-hero { grid-template-columns: 1fr; gap: 2rem; }
+      #qual { flex-direction: row; flex-wrap: wrap; }
+      .hero { grid-template-columns: 1fr; gap: 2rem; padding: 4rem 5vw 3rem; min-height: auto; }
+      #grid-redes { flex-direction: row; justify-content: flex-start; }
+    }
+
+    @media (max-width: 768px) {
+      #sobre { grid-template-columns: 1fr; padding: 3.5rem 5vw; }
+      #serv  { padding: 3.5rem 5vw; }
+      #cont  { padding: 3.5rem 5vw; }
+      #cont-div { flex-direction: column; gap: 2rem; }
+      .nav-bar .links { gap: 1rem; }
+      .nav-bar .links li:not(:last-child) { display: none; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="header">
+    <nav class="nav-bar">
+      <a href="#"><img src="assets/logo/logo.png" alt="Clínica Mônica Lunardon"></a>
+      <ul class="links">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#serv">Serviços</a></li>
+        <li><a href="#cont">Contato</a></li>
+        <li><a href="https://api.whatsapp.com/send?phone=5511984010851">Agendar</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <section class="hero">
+      <div id="main-hero">
+        <div id="text">
+          <h1 id="hero-h1">
+            Um novo padrão
+            para a Estética Avançada
+            e a beleza.
+          </h1>
+          <blockquote id="desc">
+            <p>
+              Na Clínica Mônica Lunardon, unimos experiência, tecnologia de ponta e atendimento
+              personalizado para realçar sua beleza com naturalidade e segurança.
+            </p>
+          </blockquote>
+          <div id="btns">
+            <button id="con">
+              <a href="#sobre"><p>Conheça sobre</p></a>
+            </button>
+            <button id="cta">
+              <a href="https://api.whatsapp.com/send?phone=5511984010851"><p>Agende agora!</p></a>
+            </button>
+          </div>
+        </div>
+        <div id="qual">
+          <div class="card">
+            <img src="./assets/img/qua.png" alt="Qualidade">
+            <p>Qualidade</p>
+          </div>
+          <div class="card">
+            <img src="./assets/img/exp.png" alt="Experiência">
+            <p>Experiência</p>
+          </div>
+          <div class="card">
+            <img src="./assets/img/rap.png" alt="Agilidade">
+            <p>Agilidade</p>
+          </div>
+        </div>
+      </div>
+      <div id="grid-redes">
+        <a href="https://www.instagram.com/monicalunardonestetica" class="instagram" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://api.whatsapp.com/send?phone=5511984010851" class="whatsapp" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://br.pinterest.com/mnicakauffmann/" class="pinterest" target="_blank" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+        <a href="https://www.facebook.com/monicalunardonestetica" class="facebook" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+      </div>
+    </section>
+
+    <section id="sobre">
+      <div id="div-sobre">
+        <h4>Sobre</h4>
+        <p>Desde 2004, transformamos autoestima por meio da estética avançada, combinando tecnologia de ponta,
+          atendimento humanizado e resultados que valorizam sua beleza natural.</p>
+      </div>
+      <div id="img-sobre">
+        <img src="./assets/img/bg2.jpeg" alt="Clínica Mônica Lunardon">
+      </div>
+    </section>
+
+    <section id="serv">
+      <div id="tratamentos">
+        <a class="card-trat" href="toxina-botulinica.html">
+          <img src="./assets/img/toxinabotulinica.jpeg" alt="Toxina botulínica">
+          <h6>Tratamento para rugas</h6>
+          <p>Reduza rugas e linhas de expressão com aplicação profissional.</p>
+          <p>Clique para saber mais</p>
+        </a>
+        <a class="card-trat" href="fios-de-pdo.html">
+          <img src="./assets/img/fios.jpeg" alt="Fios de PDO">
+          <h6>Fios de PDO</h6>
+          <p>Estimula a produção de colágeno e melhora a firmeza da pele.</p>
+          <p>Clique para saber mais</p>
+        </a>
+        <a class="card-trat" href="preenchimento.html">
+          <img src="./assets/img/preen.jpeg" alt="Preenchimento">
+          <h6>Preenchimento</h6>
+          <p>Harmoniza o rosto, suaviza rugas e linhas de expressão com resultados naturais e imediatos.</p>
+          <p>Clique para saber mais</p>
+        </a>
+        <a class="card-trat" href="bioestimulador.html">
+          <img src="./assets/img/bio.jpeg" alt="Bioestimulador">
+          <h6>Bioestimulador</h6>
+          <p>Estimula a produção natural de colágeno, promovendo firmeza e rejuvenescimento da pele.</p>
+          <p>Clique para saber mais</p>
+        </a>
+        <a class="card-trat" href="limpeza-de-pele.html">
+          <img src="./assets/img/limp.webp" alt="Limpeza de pele">
+          <h6>Limpeza de pele</h6>
+          <p>Remove impurezas e oleosidade, deixando a pele limpa, saudável e renovada.</p>
+          <p>Clique para saber mais</p>
+        </a>
+        <a class="card-trat" href="peeling.html">
+          <img src="./assets/img/peel.webp" alt="Peeling">
+          <h6>Peeling</h6>
+          <p>Renova a pele, melhora manchas, textura e controle da oleosidade.</p>
+          <p>Clique para saber mais</p>
+        </a>
+      </div>
+    </section>
+
+    <section id="cont">
+      <div id="cont-div">
+        <div class="coluna">
+          <h6>📍 Onde estamos</h6>
+          <p>Rua Maria Joana da Silva Correa, 160, Sala 10<br>
+            Novo Centro, Itu - SP<br>
+            CEP: 13303-538</p>
+        </div>
+        <div class="coluna">
+          <h6>📞 Fale conosco</h6>
+          <p><strong>WhatsApp:</strong> (11) 98401-0851</p>
+          <p><strong>Horário:</strong> Seg a Sab, das 08h00 às 19h00</p>
+        </div>
+      </div>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d916.2742542231376!2d-47.28611677146437!3d-23.275924266726047!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf454efa77eb7b%3A0xcf532edc05ad40ec!2sDra.%20M%C3%B4nica%20Lunardon%20%7C%20Harmoniza%C3%A7%C3%A3o%20Facial%20%7C%20Est%C3%A9tica%20Avan%C3%A7ada%20em%20Itu!5e0!3m2!1spt-BR!2sbr!4v1773272248788!5m2!1spt-BR!2sbr"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Kevin Lunardon — Todos os direitos reservados. (11) 95370-8588</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

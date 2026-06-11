@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Limpeza de pele profissional em Itu - SP. Remova impurezas e oleosidade com atendimento especializado. Clínica Mônica Lunardon.">
+  <title>Limpeza de Pele em Itu | Clínica Mônica Lunardon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --cream: #FAF7F4; --warm: #F2EDE8; --rose: #C9A99A; --rose-dk: #A07060;
+      --text: #2C2420; --muted: #7A6A64; --white: #FFFFFF;
+      --shadow: 0 4px 24px rgba(44,36,32,0.10);
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--text); line-height: 1.7; }
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(250,247,244,0.92); backdrop-filter: blur(8px); padding: 0 5vw; display: flex; align-items: center; justify-content: space-between; height: 68px; border-bottom: 1px solid rgba(201,169,154,0.25); }
+    nav .brand { font-family: 'Merriweather', serif; font-size: 1rem; font-weight: 300; letter-spacing: 0.04em; color: var(--text); text-decoration: none; }
+    nav .cta-nav { background: var(--rose); color: var(--white); padding: 0.45rem 1.2rem; border-radius: 50px; font-size: 0.85rem; font-weight: 600; text-decoration: none; transition: background 0.2s; }
+    nav .cta-nav:hover { background: var(--rose-dk); }
+    .hero { min-height: 88vh; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 4rem; padding: 6rem 8vw 4rem; }
+    .hero-eyebrow { display: inline-block; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--rose-dk); margin-bottom: 1.2rem; }
+    .hero h1 { font-family: 'Merriweather', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 300; line-height: 1.25; margin-bottom: 1.4rem; }
+    .hero h1 em { font-style: italic; color: var(--rose-dk); }
+    .hero p { font-size: 1.05rem; color: var(--muted); max-width: 42ch; margin-bottom: 2.2rem; }
+    .btn-primary { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--rose); color: var(--white); padding: 0.85rem 2rem; border-radius: 50px; font-size: 1rem; font-weight: 600; text-decoration: none; transition: background 0.2s, transform 0.15s; }
+    .btn-primary:hover { background: var(--rose-dk); transform: translateY(-1px); }
+    .hero-visual { background: var(--warm); border-radius: 24px; aspect-ratio: 4/5; display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative; }
+    .hero-badge { position: absolute; bottom: 1.5rem; left: 1.5rem; background: var(--white); border-radius: 14px; padding: 0.8rem 1.2rem; box-shadow: var(--shadow); font-size: 0.85rem; font-weight: 600; color: var(--text); }
+    .hero-badge span { display: block; font-size: 0.72rem; font-weight: 400; color: var(--muted); }
+    section { padding: 5rem 8vw; }
+    section:nth-child(even) { background: var(--warm); }
+    .section-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--rose-dk); margin-bottom: 0.6rem; }
+    .section-title { font-family: 'Merriweather', serif; font-size: clamp(1.5rem, 3vw, 2.1rem); font-weight: 300; line-height: 1.3; margin-bottom: 1rem; }
+    .section-sub { color: var(--muted); max-width: 56ch; margin-bottom: 2.5rem; font-size: 1rem; }
+    .desc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+    .desc-grid p { color: var(--muted); font-size: 1rem; line-height: 1.8; }
+    .desc-detail { background: var(--white); border-radius: 16px; padding: 2rem; box-shadow: var(--shadow); }
+    .desc-detail h3 { font-family: 'Merriweather', serif; font-size: 1rem; font-weight: 400; margin-bottom: 1.2rem; color: var(--text); }
+    .detail-row { display: flex; justify-content: space-between; padding: 0.7rem 0; border-bottom: 1px solid var(--warm); font-size: 0.9rem; }
+    .detail-row:last-child { border-bottom: none; }
+    .detail-row .label { color: var(--muted); }
+    .detail-row .value { font-weight: 600; color: var(--text); }
+    .benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; }
+    .benefit-card { background: var(--white); border-radius: 16px; padding: 1.8rem; box-shadow: var(--shadow); transition: transform 0.2s; }
+    .benefit-card:hover { transform: translateY(-3px); }
+    .benefit-icon { width: 44px; height: 44px; border-radius: 12px; background: linear-gradient(135deg, var(--rose), var(--rose-dk)); display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; font-size: 1.1rem; color: var(--white); }
+    .benefit-card h4 { font-size: 0.95rem; font-weight: 600; margin-bottom: 0.4rem; }
+    .benefit-card p { font-size: 0.88rem; color: var(--muted); line-height: 1.6; }
+    .faq-list { max-width: 720px; }
+    .faq-item { border-bottom: 1px solid rgba(201,169,154,0.3); padding: 1.2rem 0; }
+    .faq-question { width: 100%; background: none; border: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-family: 'DM Sans', sans-serif; font-size: 1rem; font-weight: 600; color: var(--text); text-align: left; padding: 0; }
+    .faq-question i { color: var(--rose); font-size: 0.85rem; transition: transform 0.2s; }
+    .faq-question.open i { transform: rotate(45deg); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; font-size: 0.95rem; color: var(--muted); line-height: 1.7; }
+    .faq-answer.open { max-height: 300px; padding-top: 0.8rem; }
+    .cta-section { background: linear-gradient(135deg, var(--rose-dk), var(--rose)); color: var(--white); text-align: center; border-radius: 24px; padding: 4rem 2rem; margin: 0 8vw 5rem; }
+    .cta-section h2 { font-family: 'Merriweather', serif; font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 300; margin-bottom: 0.8rem; }
+    .cta-section p { opacity: 0.88; margin-bottom: 2rem; font-size: 1rem; }
+    .btn-white { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--white); color: var(--rose-dk); padding: 0.85rem 2rem; border-radius: 50px; font-size: 1rem; font-weight: 700; text-decoration: none; transition: transform 0.15s; }
+    .btn-white:hover { transform: translateY(-2px); }
+    footer { background: var(--text); color: rgba(255,255,255,0.55); text-align: center; padding: 1.8rem; font-size: 0.82rem; }
+    footer a { color: var(--rose); text-decoration: none; }
+    nav a:first-child img { width: 180px; display: block; }
+    @media (max-width: 768px) {
+      .hero { grid-template-columns: 1fr; padding: 4rem 5vw 3rem; gap: 2.5rem; min-height: auto; }
+      .hero-visual { aspect-ratio: 16/9; }
+      .desc-grid { grid-template-columns: 1fr; gap: 2rem; }
+      section { padding: 3.5rem 5vw; }
+      .cta-section { margin: 0 5vw 3.5rem; }
+    }
+  </style>
+</head>
+<body>
+<nav>
+  <a href="index.html"><img src="assets/logo/logo.png" alt="Clínica Mônica Lunardon"></a>
+  <a href="https://api.whatsapp.com/send?phone=5511984010851" class="cta-nav" target="_blank"><i class="fa-brands fa-whatsapp"></i> Agendar</a>
+</nav>
+
+<section class="hero" style="background: var(--cream); padding-top: 5rem;">
+  <div>
+    <span class="hero-eyebrow">Cuidado com a pele · Itu, SP</span>
+    <h1>Pele limpa, saudável e <em>radiante desde a primeira sessão</em></h1>
+    <p>A limpeza de pele profissional remove impurezas, cravos, oleosidade excessiva e células mortas — deixando a pele renovada, respirando livremente e muito mais receptiva a outros tratamentos.</p>
+    <a href="https://api.whatsapp.com/send?phone=5511984010851&text=Olá! Gostaria de agendar uma sessão de limpeza de pele." class="btn-primary" target="_blank"><i class="fa-brands fa-whatsapp"></i> Agendar sessão</a>
+  </div>
+  <div class="hero-visual">
+    <div style="text-align:center; color: var(--muted); font-size: 0.9rem; padding: 2rem;"><img src="assets/img/limp.webp"></div>
+    <div class="hero-badge">Pele renovada<span>Resultado na primeira sessão</span></div>
+  </div>
+</section>
+
+<section>
+  <div class="section-label">O procedimento</div>
+  <h2 class="section-title">O que é a limpeza de pele profissional?</h2>
+  <div class="desc-grid">
+    <div>
+      <p>A limpeza de pele profissional vai muito além da rotina doméstica. Com técnicas e produtos específicos, remove impurezas profundas, cravos, oleosidade e células mortas que o skincare diário não alcança. O resultado é uma pele visivelmente mais limpa, uniforme e saudável.</p>
+      <br>
+      <p>Na Clínica Mônica Lunardon, o protocolo é adaptado ao tipo e às necessidades de cada pele — seja oleosa, seca, mista ou sensível — garantindo uma experiência segura e eficaz.</p>
+    </div>
+    <div class="desc-detail">
+      <h3>Informações do procedimento</h3>
+      <div class="detail-row"><span class="label">Duração da sessão</span><span class="value">60 a 90 min</span></div>
+      <div class="detail-row"><span class="label">Resultado</span><span class="value">Imediato</span></div>
+      <div class="detail-row"><span class="label">Frequência ideal</span><span class="value">A cada 30 dias</span></div>
+      <div class="detail-row"><span class="label">Recuperação</span><span class="value">Sem downtime</span></div>
+      <div class="detail-row"><span class="label">Indicado para</span><span class="value">Todos os tipos de pele</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="section-label">Por que escolher</div>
+  <h2 class="section-title">Benefícios da limpeza de pele</h2>
+  <p class="section-sub">O cuidado essencial para manter a saúde e o brilho da sua pele.</p>
+  <div class="benefits-grid">
+    <div class="benefit-card"><div class="benefit-icon"><i class="fa-solid fa-star"></i></div><h4>Pele radiante</h4><p>Remove o acúmulo de células mortas que opacifica a pele, devolvendo luminosidade.</p></div>
+    <div class="benefit-card"><div class="benefit-icon"><i class="fa-solid fa-shield-halved"></i></div><h4>Poros desobstruídos</h4><p>Extrai cravos e sebo acumulado, prevenindo espinhas e reduzindo os poros visivelmente.</p></div>
+    <div class="benefit-card"><div class="benefit-icon"><i class="fa-solid fa-wand-sparkles"></i></div><h4>Absorção potencializada</h4><p>Pele limpa absorve melhor os ativos dos cosméticos e tratamentos subsequentes.</p></div>
+    <div class="benefit-card"><div class="benefit-icon"><i class="fa-solid fa-heart"></i></div><h4>Para todo tipo de pele</h4><p>Protocolo adaptado para peles oleosas, secas, mistas e sensíveis com segurança.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="section-label">Dúvidas frequentes</div>
+  <h2 class="section-title">Perguntas sobre limpeza de pele</h2>
+  <div class="faq-list">
+    <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">A limpeza de pele machuca? <i class="fa-solid fa-plus"></i></button><div class="faq-answer">A extração pode causar leve desconforto pontual, mas o procedimento é bem tolerado. A Dra. Mônica preza pela delicadeza e adapta a técnica conforme a sensibilidade de cada paciente.</div></div>
+    <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">Com que frequência devo fazer? <i class="fa-solid fa-plus"></i></button><div class="faq-answer">O ideal é realizar a cada 30 dias. Para peles com maior oleosidade ou tendência a cravos, pode ser indicada com mais frequência. A Dra. Mônica avalia e recomenda o intervalo ideal.</div></div>
+    <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">A pele fica vermelha após? <i class="fa-solid fa-plus"></i></button><div class="faq-answer">É normal uma leve vermelhidão logo após a sessão, que desaparece em poucas horas. Para maior segurança, recomenda-se agendar em dias que não haja compromissos sociais logo em seguida.</div></div>
+    <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">Funciona para pele acneica? <i class="fa-solid fa-plus"></i></button><div class="faq-answer">Sim, mas com cuidados específicos. A limpeza de pele profissional ajuda no controle da acne, mas o protocolo é adaptado para não agravar o quadro. A avaliação prévia é essencial.</div></div>
+    <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">Preciso de cuidados após a sessão? <i class="fa-solid fa-plus"></i></button><div class="faq-answer">Sim. Recomenda-se evitar sol direto por 24 horas, usar protetor solar, não aplicar maquiagem no mesmo dia e manter a hidratação da pele conforme orientação da profissional.</div></div>
+  </div>
+</section>
+
+<div class="cta-section">
+  <h2>Sua pele merece esse cuidado</h2>
+  <p>Agende sua sessão de limpeza de pele e sinta a diferença.</p>
+  <a href="https://api.whatsapp.com/send?phone=5511984010851&text=Olá! Gostaria de agendar uma sessão de limpeza de pele." class="btn-white" target="_blank"><i class="fa-brands fa-whatsapp"></i> Falar no WhatsApp</a>
+</div>
+
+<footer><p>© 2026 Clínica Mônica Lunardon · Rua Maria Joana da Silva Correa, 160, Sala 10 — Itu, SP · <a href="https://api.whatsapp.com/send?phone=5511984010851">(11) 98401-0851</a></p></footer>
+<script>function toggleFaq(btn){const answer=btn.nextElementSibling;const isOpen=answer.classList.contains('open');document.querySelectorAll('.faq-answer').forEach(a=>a.classList.remove('open'));document.querySelectorAll('.faq-question').forEach(b=>b.classList.remove('open'));if(!isOpen){answer.classList.add('open');btn.classList.add('open');}}</script>
+</body>
+</html>
